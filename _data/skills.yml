@@ -1,0 +1,20 @@
+- category: "Container & Orchestration"
+  items: "Kubernetes, Docker, Helm, ArgoCD, Harbor"
+
+- category: "Cloud & Infrastructure"
+  items: "AWS (EKS, EC2, VPC, RDS, S3, Lambda, API Gateway, EventBridge), Terraform, Terragrunt"
+
+- category: "Networking & Security"
+  items: "Calico CNI, MetalLB, Site-to-Site VPN, Cloudflare Tunnel, gRPC, HTTP/2"
+
+- category: "Database & Storage"
+  items: "MariaDB MaxScale, PostgreSQL, Redis Cluster, Ceph, Rook, SeaweedFS"
+
+- category: "Monitoring & Observability"
+  items: "Prometheus, Grafana, Loki, Promtail, Zabbix, AlertManager, Fluent Bit"
+
+- category: "CI/CD & Automation"
+  items: "GitHub Actions, GitOps, Python, Bash Script, Shell Scripting"
+
+- category: "AI/ML Infrastructure"
+  items: "NVIDIA Triton Server, NVIDIA Device Plugin, GPU Optimization"

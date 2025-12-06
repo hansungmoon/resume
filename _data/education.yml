@@ -1,0 +1,9 @@
+- school: "Seoul Cyber University"
+  degree: "AI 전공"
+  year: "2024 - Present"
+  summary: "AI 기술 전문성 강화를 위한 학위 과정 수강 중"
+
+- school: "CodeStates"
+  degree: "DevOps Bootcamp"
+  year: "March 2023 - July 2023"
+  summary: "클라우드 인프라, 컨테이너 오케스트레이션, CI/CD 파이프라인, Infrastructure as Code 등 DevOps 핵심 기술 집중 교육"

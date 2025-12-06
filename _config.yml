@@ -1,0 +1,47 @@
+# Site settings
+title: "문한성 | DevOps Engineer"
+description: "DevOps Engineer Portfolio - Kubernetes, AWS, Infrastructure as Code"
+url: "https://hansungmoon.github.io"
+baseurl: "/resume"
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed
+
+# Resume settings
+resume_avatar: "true"
+resume_name: "문한성"
+resume_title: "DevOps Engineer"
+
+# Contact info - 개인정보 보호를 위해 이메일/전화번호 숨김
+resume_contact_email: ""
+resume_contact_telephone: ""
+resume_contact_address: "Seoul, South Korea"
+
+# Social links
+resume_social_links:
+  resume_github_url: "https://github.com/hansungmoon"
+  resume_twitter_url: ""
+  resume_dribbble_url: ""
+  resume_facebook_url: ""
+  resume_linkedin_url: ""
+  resume_instagram_url: ""
+  resume_website_url: "https://velog.io/@arnold_99"
+
+# Resume section settings
+resume_section_experience: true
+resume_section_education: true
+resume_section_projects: true
+resume_section_skills: true
+resume_section_recognition: false
+resume_section_links: true
+resume_section_associations: false
+
+# Resume footer settings
+resume_footer_name: "Hansung Moon"
+resume_footer_contacts: ""
+
+# Enable plugins
+plugins:
+  - jekyll-seo-tag
