@@ -1,38 +1,28 @@
-# 문한성 | DevOps Engineer Portfolio
+# DevOps Engineer Portfolio
 
-[![Deploy Jekyll site to Pages](https://github.com/hansungmoon/resume/actions/workflows/jekyll.yml/badge.svg)](https://github.com/hansungmoon/resume/actions/workflows/jekyll.yml)
+[![Deploy to GitHub Pages](https://github.com/hansungmoon/resume/actions/workflows/deploy.yml/badge.svg)](https://github.com/hansungmoon/resume/actions/workflows/deploy.yml)
 
-## 🌐 Live Demo
-**[https://hansungmoon.github.io/resume](https://hansungmoon.github.io/resume)**
+## 🌐 Live
 
-## 📋 소개
-DevOps Engineer로서 AI/ML 서비스 인프라 설계 및 운영 경험을 담은 온라인 포트폴리오입니다.
+**[hansungmoon.github.io/resume](https://hansungmoon.github.io/resume)**
 
-## 🛠 Tech Stack
+## 🛠 Tech Focus
+
 - **Container & Orchestration**: Kubernetes, Docker, Helm, ArgoCD, Harbor
-- **Cloud & Infrastructure**: AWS (EKS, EC2, VPC, RDS, Lambda), Terraform, Terragrunt
-- **Monitoring & Observability**: Prometheus, Grafana, Loki, Zabbix
+- **Cloud & IaC**: AWS, Terraform, Terragrunt, GitHub Actions
+- **Observability**: Prometheus, Grafana, Loki, AlertManager
+- **AI/ML Infra**: NVIDIA Triton Server, GPU Optimization
 
-## 📂 주요 프로젝트
-1. 인터넷 없이 동작하는 AI 플랫폼 구축
-2. Harbor 컨테이너 레지스트리 마이그레이션
-3. Terraform/Terragrunt 기반 멀티 환경 IaC 파이프라인
-4. On-premise, AWS 하이브리드 클라우드 아키텍처 구축
-5. AWS EventBridge를 활용한 EC2 자동 관리 시스템
+## 📂 Featured Projects
+
+1. Air-gapped AI Platform (99.99% availability, 5K req/sec)
+2. IaC Pipeline with Terragrunt (80% code reduction)
+3. Hybrid Cloud Architecture (74% cost reduction)
+4. Container Registry Migration (2,847 images, zero downtime)
+5. Observability Stack (MTTR 48h → 4h)
+6. EKS GitOps Automation
 
 ## 🔗 Links
-- **GitHub**: [github.com/hansungmoon](https://github.com/hansungmoon)
-- **Blog**: [velog.io/@arnold_99](https://velog.io/@arnold_99)
 
-## 🚀 로컬 실행
-```bash
-bundle install
-bundle exec jekyll serve
-```
-http://localhost:4000/resume 에서 확인 가능
-
-## 📝 License
-MIT License
-
----
-*Based on [Jekyll Resume Template](https://github.com/jglovier/resume-template) by Joel Glovier*
+- [GitHub](https://github.com/hansungmoon)
+- [Tech Blog](https://velog.io/@arnold_99)

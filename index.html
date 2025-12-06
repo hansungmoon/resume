@@ -1,3 +1,451 @@
----
-layout: resume
----
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Engineer Portfolio</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Terminal-style Header -->
+  <header class="hero">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <span class="terminal-btn red"></span>
+        <span class="terminal-btn yellow"></span>
+        <span class="terminal-btn green"></span>
+        <span class="terminal-title">portfolio.sh</span>
+      </div>
+      <div class="terminal-body">
+        <div class="typing-container">
+          <span class="prompt">$</span>
+          <span class="command" id="typed-text"></span>
+          <span class="cursor">_</span>
+        </div>
+        <div class="output">
+          <pre class="ascii-art">
+ ____             ___              
+|  _ \  _____   _/ _ \ _ __  ___   
+| | | |/ _ \ \ / / | | | '_ \/ __|  
+| |_| |  __/\ V /| |_| | |_) \__ \  
+|____/ \___| \_/  \___/| .__/|___/  
+                       |_|          
+          </pre>
+          <p class="tagline">Infrastructure as Code &bull; Kubernetes &bull; Cloud Native</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </header>
+
+  <!-- Tech Stack Section -->
+  <section class="section tech-stack">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-icon">▲</span>
+        Tech Stack
+      </h2>
+      <div class="stack-grid">
+        <div class="stack-category">
+          <h3><span class="cat-icon">⎔</span> Container & Orchestration</h3>
+          <div class="tech-tags">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Helm</span>
+            <span class="tag">ArgoCD</span>
+            <span class="tag">Harbor</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3><span class="cat-icon">☁</span> Cloud & IaC</h3>
+          <div class="tech-tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">Terragrunt</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3><span class="cat-icon">⬡</span> Networking</h3>
+          <div class="tech-tags">
+            <span class="tag">Calico CNI</span>
+            <span class="tag">MetalLB</span>
+            <span class="tag">Site-to-Site VPN</span>
+            <span class="tag">gRPC</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3><span class="cat-icon">◉</span> Database & Storage</h3>
+          <div class="tech-tags">
+            <span class="tag">MariaDB MaxScale</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis Cluster</span>
+            <span class="tag">Ceph/Rook</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3><span class="cat-icon">◈</span> Observability</h3>
+          <div class="tech-tags">
+            <span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">Loki</span>
+            <span class="tag">AlertManager</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3><span class="cat-icon">▣</span> AI/ML Infra</h3>
+          <div class="tech-tags">
+            <span class="tag">NVIDIA Triton</span>
+            <span class="tag">GPU Optimization</span>
+            <span class="tag">Model Serving</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section projects">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-icon">◆</span>
+        Projects
+      </h2>
+      
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-number">01</span>
+          <h3>Air-gapped AI Platform</h3>
+        </div>
+        <p class="project-desc">오프라인 환경 AI 추론 플랫폼 - 3중화 클러스터링 & 고가용성 아키텍처</p>
+        <div class="architecture-diagram">
+          <div class="arch-layer">
+            <span class="layer-label">Ingress</span>
+            <div class="arch-nodes">
+              <div class="arch-node">MetalLB</div>
+              <div class="arch-node">NGINX</div>
+            </div>
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-layer">
+            <span class="layer-label">Service</span>
+            <div class="arch-nodes">
+              <div class="arch-node highlight">Triton Server</div>
+              <div class="arch-node highlight">Triton Server</div>
+              <div class="arch-node">Backend API</div>
+            </div>
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-layer">
+            <span class="layer-label">Data</span>
+            <div class="arch-nodes">
+              <div class="arch-node">MariaDB<br><small>MaxScale 3중화</small></div>
+              <div class="arch-node">Redis<br><small>6-node Cluster</small></div>
+              <div class="arch-node">SeaweedFS<br><small>3x Replication</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric">
+            <span class="metric-value">99.99%</span>
+            <span class="metric-label">Availability</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">5,000</span>
+            <span class="metric-label">req/sec</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">85%</span>
+            <span class="metric-label">GPU Utilization</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">&lt;30s</span>
+            <span class="metric-label">MTTR</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-number">02</span>
+          <h3>IaC Pipeline with Terragrunt</h3>
+        </div>
+        <p class="project-desc">DRY 원칙 기반 멀티 환경 인프라 자동화 - GitOps 파이프라인</p>
+        <div class="code-block">
+          <div class="code-header">
+            <span>terragrunt.hcl</span>
+          </div>
+          <pre><code><span class="code-comment"># Stage/Prod 환경 95% 코드 재사용</span>
+<span class="code-keyword">include</span> "root" {
+  path = find_in_parent_folders()
+}
+
+<span class="code-keyword">terraform</span> {
+  source = "..//modules/ecs-cluster"
+}
+
+<span class="code-keyword">inputs</span> = {
+  environment    = <span class="code-string">"production"</span>
+  instance_count = <span class="code-number">3</span>
+  enable_ha      = <span class="code-boolean">true</span>
+}</code></pre>
+        </div>
+        <div class="pipeline-flow">
+          <div class="pipeline-step">
+            <span class="step-icon">📝</span>
+            <span>PR Created</span>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <span class="step-icon">🔍</span>
+            <span>terraform plan</span>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <span class="step-icon">✓</span>
+            <span>Review</span>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <span class="step-icon">🚀</span>
+            <span>terraform apply</span>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric">
+            <span class="metric-value">80%</span>
+            <span class="metric-label">Code Reduction</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">96%</span>
+            <span class="metric-label">Deploy Time ↓</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">Zero</span>
+            <span class="metric-label">Env Drift</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-number">03</span>
+          <h3>Hybrid Cloud Architecture</h3>
+        </div>
+        <p class="project-desc">On-premise ↔ AWS 하이브리드 구성 - VPN 이중화 & 비용 최적화</p>
+        <div class="hybrid-diagram">
+          <div class="cloud-box aws">
+            <span class="cloud-label">AWS VPC</span>
+            <div class="cloud-services">
+              <span>Route53</span>
+              <span>ALB</span>
+              <span>EC2</span>
+            </div>
+          </div>
+          <div class="vpn-tunnel">
+            <div class="tunnel-line"></div>
+            <span class="tunnel-label">IPSec VPN x2</span>
+            <div class="tunnel-line"></div>
+          </div>
+          <div class="cloud-box onprem">
+            <span class="cloud-label">On-Premise K8s</span>
+            <div class="cloud-services">
+              <span>MetalLB</span>
+              <span>Ingress</span>
+              <span>GPU Pods</span>
+            </div>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric">
+            <span class="metric-value">74%</span>
+            <span class="metric-label">Cost Reduction</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">$383</span>
+            <span class="metric-label">Monthly Savings</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-number">04</span>
+          <h3>Container Registry Migration</h3>
+        </div>
+        <p class="project-desc">Docker Registry → Harbor 무중단 마이그레이션 + 보안 스캔 자동화</p>
+        <div class="migration-flow">
+          <div class="migration-source">
+            <span class="mig-label">Source</span>
+            <div class="mig-box old">Docker Registry</div>
+            <span class="mig-count">2,847 images</span>
+          </div>
+          <div class="migration-arrow">
+            <span>parallel replication</span>
+            <div class="arrow-line"></div>
+          </div>
+          <div class="migration-target">
+            <span class="mig-label">Target</span>
+            <div class="mig-box new">Harbor + Trivy</div>
+            <span class="mig-count">vulnerability scan</span>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric">
+            <span class="metric-value">85%</span>
+            <span class="metric-label">Time Reduction</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">90%</span>
+            <span class="metric-label">Automation</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">$2,880</span>
+            <span class="metric-label">Annual Savings</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-number">05</span>
+          <h3>Observability Stack</h3>
+        </div>
+        <p class="project-desc">Loki + Promtail + Grafana + AlertManager 기반 로그 모니터링</p>
+        <div class="obs-flow">
+          <div class="obs-node">
+            <span class="obs-icon">📄</span>
+            <span>JSON Logs</span>
+          </div>
+          <div class="obs-arrow">→</div>
+          <div class="obs-node">
+            <span class="obs-icon">📥</span>
+            <span>Promtail</span>
+          </div>
+          <div class="obs-arrow">→</div>
+          <div class="obs-node">
+            <span class="obs-icon">🗄</span>
+            <span>Loki</span>
+          </div>
+          <div class="obs-arrow">→</div>
+          <div class="obs-node">
+            <span class="obs-icon">📊</span>
+            <span>Grafana</span>
+          </div>
+          <div class="obs-arrow">→</div>
+          <div class="obs-node alert">
+            <span class="obs-icon">🔔</span>
+            <span>Slack Alert</span>
+          </div>
+        </div>
+        <div class="metrics-grid">
+          <div class="metric">
+            <span class="metric-value">48h→4h</span>
+            <span class="metric-label">MTTR</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">&lt;60s</span>
+            <span class="metric-label">Detection</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">99.8%</span>
+            <span class="metric-label">Availability</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-number">06</span>
+          <h3>EKS GitOps Automation</h3>
+        </div>
+        <p class="project-desc">Terraform + ArgoCD 기반 EKS 클러스터 & AI 워크로드 관리</p>
+        <div class="gitops-diagram">
+          <div class="gitops-layer">
+            <div class="gitops-node">
+              <span>GitHub</span>
+            </div>
+            <div class="gitops-arrow">push</div>
+            <div class="gitops-node">
+              <span>GitHub Actions</span>
+            </div>
+          </div>
+          <div class="gitops-split">
+            <div class="gitops-branch">
+              <span class="branch-label">infra/</span>
+              <div class="gitops-node highlight">Terraform</div>
+              <div class="gitops-arrow">apply</div>
+              <div class="gitops-node">EKS Cluster</div>
+            </div>
+            <div class="gitops-branch">
+              <span class="branch-label">k8s/</span>
+              <div class="gitops-node highlight">ArgoCD</div>
+              <div class="gitops-arrow">sync</div>
+              <div class="gitops-node">Workloads</div>
+            </div>
+          </div>
+        </div>
+        <div class="node-types">
+          <div class="node-type">
+            <span class="node-icon on-demand">●</span>
+            <span>On-Demand (stability)</span>
+          </div>
+          <div class="node-type">
+            <span class="node-icon spot">●</span>
+            <span>Spot Instance (60% off)</span>
+          </div>
+          <div class="node-type">
+            <span class="node-icon gpu">●</span>
+            <span>GPU Node (NVIDIA Plugin)</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Links Section -->
+  <section class="section links">
+    <div class="container">
+      <div class="links-grid">
+        <a href="https://github.com/hansungmoon" target="_blank" class="link-card">
+          <span class="link-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </span>
+          <span class="link-text">GitHub</span>
+          <span class="link-url">github.com/hansungmoon</span>
+        </a>
+        <a href="https://velog.io/@arnold_99" target="_blank" class="link-card">
+          <span class="link-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+              <path d="M3 3v18h18V3H3zm16.5 16.5h-15v-15h15v15zM6.5 7h3v10h-3V7zm4 0h7v2h-7V7zm0 4h7v2h-7v-2zm0 4h5v2h-5v-2z"/>
+            </svg>
+          </span>
+          <span class="link-text">Tech Blog</span>
+          <span class="link-url">velog.io/@arnold_99</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built with <span class="heart">♥</span> and lots of <code>kubectl</code></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
