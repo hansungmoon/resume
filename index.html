@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,7 @@
 |____/ \___| \_/  \___/| .__/|___/  
                        |_|          
           </pre>
-          <p class="tagline">Infrastructure as Code &bull; Kubernetes &bull; Cloud Native</p>
+          <p class="tagline">Infrastructure as Code | Kubernetes | Cloud Native</p>
         </div>
       </div>
     </div>
@@ -46,12 +46,12 @@
   <section class="section tech-stack">
     <div class="container">
       <h2 class="section-title">
-        <span class="title-icon">??/span>
+        <span class="title-icon">#</span>
         Tech Stack
       </h2>
       <div class="stack-grid">
         <div class="stack-category">
-          <h3><span class="cat-icon">??/span> Container & Orchestration</h3>
+          <h3><span class="cat-icon">[1]</span> Container and Orchestration</h3>
           <div class="tech-tags">
             <span class="tag">Kubernetes</span>
             <span class="tag">Docker</span>
@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="stack-category">
-          <h3><span class="cat-icon">??/span> Cloud & IaC</h3>
+          <h3><span class="cat-icon">[2]</span> Cloud and IaC</h3>
           <div class="tech-tags">
             <span class="tag">AWS</span>
             <span class="tag">Terraform</span>
@@ -70,7 +70,7 @@
           </div>
         </div>
         <div class="stack-category">
-          <h3><span class="cat-icon">‚¨?/span> Networking</h3>
+          <h3><span class="cat-icon">[3]</span> Networking</h3>
           <div class="tech-tags">
             <span class="tag">Calico CNI</span>
             <span class="tag">MetalLB</span>
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div class="stack-category">
-          <h3><span class="cat-icon">??/span> Database & Storage</h3>
+          <h3><span class="cat-icon">[4]</span> Database and Storage</h3>
           <div class="tech-tags">
             <span class="tag">MariaDB MaxScale</span>
             <span class="tag">PostgreSQL</span>
@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="stack-category">
-          <h3><span class="cat-icon">??/span> Observability</h3>
+          <h3><span class="cat-icon">[5]</span> Observability</h3>
           <div class="tech-tags">
             <span class="tag">Prometheus</span>
             <span class="tag">Grafana</span>
@@ -97,7 +97,7 @@
           </div>
         </div>
         <div class="stack-category">
-          <h3><span class="cat-icon">??/span> AI/ML Infra</h3>
+          <h3><span class="cat-icon">[6]</span> AI/ML Infra</h3>
           <div class="tech-tags">
             <span class="tag">NVIDIA Triton</span>
             <span class="tag">GPU Optimization</span>
@@ -112,7 +112,7 @@
   <section class="section projects">
     <div class="container">
       <h2 class="section-title">
-        <span class="title-icon">??/span>
+        <span class="title-icon">#</span>
         Projects
       </h2>
       
@@ -122,29 +122,29 @@
           <span class="project-number">01</span>
           <h3>Air-gapped AI Platform</h3>
         </div>
-        <p class="project-desc">?§ÌîÑ?ºÏù∏ ?òÍ≤Ω AI Ï∂îÎ°† ?åÎû´??- 3Ï§ëÌôî ?¥Îü¨?§ÌÑ∞Îß?& Í≥†Í??©ÏÑ± ?ÑÌÇ§?çÏ≤ò</p>
+        <p class="project-desc">Offline AI inference platform with triple-redundant clustering and high availability architecture</p>
         <div class="architecture-diagram">
           <div class="arch-layer">
-            <span class="layer-label">Ingress</span>
+            <span class="layer-label">INGRESS</span>
             <div class="arch-nodes">
               <div class="arch-node">MetalLB</div>
               <div class="arch-node">NGINX</div>
             </div>
           </div>
-          <div class="arch-arrow">??/div>
+          <div class="arch-arrow-down"></div>
           <div class="arch-layer">
-            <span class="layer-label">Service</span>
+            <span class="layer-label">SERVICE</span>
             <div class="arch-nodes">
               <div class="arch-node highlight">Triton Server</div>
               <div class="arch-node highlight">Triton Server</div>
               <div class="arch-node">Backend API</div>
             </div>
           </div>
-          <div class="arch-arrow">??/div>
+          <div class="arch-arrow-down"></div>
           <div class="arch-layer">
-            <span class="layer-label">Data</span>
+            <span class="layer-label">DATA</span>
             <div class="arch-nodes">
-              <div class="arch-node">MariaDB<br><small>MaxScale 3Ï§ëÌôî</small></div>
+              <div class="arch-node">MariaDB<br><small>MaxScale 3-node</small></div>
               <div class="arch-node">Redis<br><small>6-node Cluster</small></div>
               <div class="arch-node">SeaweedFS<br><small>3x Replication</small></div>
             </div>
@@ -176,12 +176,12 @@
           <span class="project-number">02</span>
           <h3>IaC Pipeline with Terragrunt</h3>
         </div>
-        <p class="project-desc">DRY ?êÏπô Í∏∞Î∞ò Î©Ä???òÍ≤Ω ?∏ÌîÑ???êÎèô??- GitOps ?åÏù¥?ÑÎùº??/p>
+        <p class="project-desc">DRY-principle based multi-environment infrastructure automation with GitOps pipeline</p>
         <div class="code-block">
           <div class="code-header">
             <span>terragrunt.hcl</span>
           </div>
-          <pre><code><span class="code-comment"># Stage/Prod ?òÍ≤Ω 95% ÏΩîÎìú ?¨ÏÇ¨??/span>
+          <pre><code><span class="code-comment"># Stage/Prod 95% code reuse</span>
 <span class="code-keyword">include</span> "root" {
   path = find_in_parent_folders()
 }
@@ -198,23 +198,23 @@
         </div>
         <div class="pipeline-flow">
           <div class="pipeline-step">
-            <span class="step-icon">?ìù</span>
-            <span>PR Created</span>
+            <span class="step-icon">PR</span>
+            <span>Created</span>
           </div>
-          <div class="pipeline-arrow">??/div>
+          <div class="pipeline-connector"></div>
           <div class="pipeline-step">
-            <span class="step-icon">?îç</span>
-            <span>terraform plan</span>
+            <span class="step-icon">TF</span>
+            <span>Plan</span>
           </div>
-          <div class="pipeline-arrow">??/div>
+          <div class="pipeline-connector"></div>
           <div class="pipeline-step">
-            <span class="step-icon">??/span>
+            <span class="step-icon">OK</span>
             <span>Review</span>
           </div>
-          <div class="pipeline-arrow">??/div>
+          <div class="pipeline-connector"></div>
           <div class="pipeline-step">
-            <span class="step-icon">??</span>
-            <span>terraform apply</span>
+            <span class="step-icon">GO</span>
+            <span>Apply</span>
           </div>
         </div>
         <div class="metrics-grid">
@@ -224,7 +224,7 @@
           </div>
           <div class="metric">
             <span class="metric-value">96%</span>
-            <span class="metric-label">Deploy Time ??/span>
+            <span class="metric-label">Deploy Time Down</span>
           </div>
           <div class="metric">
             <span class="metric-value">Zero</span>
@@ -239,7 +239,7 @@
           <span class="project-number">03</span>
           <h3>Hybrid Cloud Architecture</h3>
         </div>
-        <p class="project-desc">On-premise ??AWS ?òÏù¥Î∏åÎ¶¨??Íµ¨ÏÑ± - VPN ?¥Ï§ë??& ÎπÑÏö© ÏµúÏ†Å??/p>
+        <p class="project-desc">On-premise and AWS hybrid setup with dual VPN and cost optimization</p>
         <div class="hybrid-diagram">
           <div class="cloud-box aws">
             <span class="cloud-label">AWS VPC</span>
@@ -281,7 +281,7 @@
           <span class="project-number">04</span>
           <h3>Container Registry Migration</h3>
         </div>
-        <p class="project-desc">Docker Registry ??Harbor Î¨¥Ï§ë??ÎßàÏù¥Í∑∏Î†à?¥ÏÖò + Î≥¥Ïïà ?§Ï∫î ?êÎèô??/p>
+        <p class="project-desc">Zero-downtime migration from Docker Registry to Harbor with security scanning</p>
         <div class="migration-flow">
           <div class="migration-source">
             <span class="mig-label">Source</span>
@@ -289,13 +289,13 @@
             <span class="mig-count">2,847 images</span>
           </div>
           <div class="migration-arrow">
-            <span>parallel replication</span>
+            <span>parallel sync</span>
             <div class="arrow-line"></div>
           </div>
           <div class="migration-target">
             <span class="mig-label">Target</span>
             <div class="mig-box new">Harbor + Trivy</div>
-            <span class="mig-count">vulnerability scan</span>
+            <span class="mig-count">vuln scan</span>
           </div>
         </div>
         <div class="metrics-grid">
@@ -320,37 +320,37 @@
           <span class="project-number">05</span>
           <h3>Observability Stack</h3>
         </div>
-        <p class="project-desc">Loki + Promtail + Grafana + AlertManager Í∏∞Î∞ò Î°úÍ∑∏ Î™®Îãà?∞ÎßÅ</p>
+        <p class="project-desc">Loki + Promtail + Grafana + AlertManager based log monitoring system</p>
         <div class="obs-flow">
           <div class="obs-node">
-            <span class="obs-icon">?ìÑ</span>
+            <span class="obs-icon">LOG</span>
             <span>JSON Logs</span>
           </div>
-          <div class="obs-arrow">??/div>
+          <div class="obs-connector"></div>
           <div class="obs-node">
-            <span class="obs-icon">?ì•</span>
+            <span class="obs-icon">IN</span>
             <span>Promtail</span>
           </div>
-          <div class="obs-arrow">??/div>
+          <div class="obs-connector"></div>
           <div class="obs-node">
-            <span class="obs-icon">?óÑ</span>
+            <span class="obs-icon">DB</span>
             <span>Loki</span>
           </div>
-          <div class="obs-arrow">??/div>
+          <div class="obs-connector"></div>
           <div class="obs-node">
-            <span class="obs-icon">?ìä</span>
+            <span class="obs-icon">VIZ</span>
             <span>Grafana</span>
           </div>
-          <div class="obs-arrow">??/div>
+          <div class="obs-connector"></div>
           <div class="obs-node alert">
-            <span class="obs-icon">?îî</span>
-            <span>Slack Alert</span>
+            <span class="obs-icon">!</span>
+            <span>Slack</span>
           </div>
         </div>
         <div class="metrics-grid">
           <div class="metric">
-            <span class="metric-value">48h??h</span>
-            <span class="metric-label">MTTR</span>
+            <span class="metric-value">92%</span>
+            <span class="metric-label">MTTR Reduction</span>
           </div>
           <div class="metric">
             <span class="metric-value">&lt;60s</span>
@@ -369,44 +369,40 @@
           <span class="project-number">06</span>
           <h3>EKS GitOps Automation</h3>
         </div>
-        <p class="project-desc">Terraform + ArgoCD Í∏∞Î∞ò EKS ?¥Îü¨?§ÌÑ∞ & AI ?åÌÅ¨Î°úÎìú Í¥ÄÎ¶?/p>
+        <p class="project-desc">Terraform + ArgoCD based EKS cluster and AI workload management</p>
         <div class="gitops-diagram">
           <div class="gitops-layer">
-            <div class="gitops-node">
-              <span>GitHub</span>
-            </div>
-            <div class="gitops-arrow">push</div>
-            <div class="gitops-node">
-              <span>GitHub Actions</span>
-            </div>
+            <div class="gitops-node">GitHub</div>
+            <div class="gitops-connector"></div>
+            <div class="gitops-node">GitHub Actions</div>
           </div>
           <div class="gitops-split">
             <div class="gitops-branch">
               <span class="branch-label">infra/</span>
               <div class="gitops-node highlight">Terraform</div>
-              <div class="gitops-arrow">apply</div>
+              <div class="gitops-connector-v"></div>
               <div class="gitops-node">EKS Cluster</div>
             </div>
             <div class="gitops-branch">
               <span class="branch-label">k8s/</span>
               <div class="gitops-node highlight">ArgoCD</div>
-              <div class="gitops-arrow">sync</div>
+              <div class="gitops-connector-v"></div>
               <div class="gitops-node">Workloads</div>
             </div>
           </div>
         </div>
         <div class="node-types">
           <div class="node-type">
-            <span class="node-icon on-demand">??/span>
+            <span class="node-icon on-demand"></span>
             <span>On-Demand (stability)</span>
           </div>
           <div class="node-type">
-            <span class="node-icon spot">??/span>
+            <span class="node-icon spot"></span>
             <span>Spot Instance (60% off)</span>
           </div>
           <div class="node-type">
-            <span class="node-icon gpu">??/span>
-            <span>GPU Node (NVIDIA Plugin)</span>
+            <span class="node-icon gpu"></span>
+            <span>GPU Node (NVIDIA)</span>
           </div>
         </div>
       </article>
@@ -442,7 +438,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>Built with <span class="heart">??/span> and lots of <code>kubectl</code></p>
+      <p>Built with <span class="heart">love</span> and lots of <code>kubectl</code></p>
     </div>
   </footer>
 
